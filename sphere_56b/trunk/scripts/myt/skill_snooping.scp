@@ -155,7 +155,7 @@ if <belltest <stealing>,<SNOOP_CALC_DIF <argo.topobj>>>
     
     if <LOCAL.ia> >= <argo.amount>
         serv.newdupe <argo>
-        new.amount=<LOCAL.ia>
+        new.amount=<argo.amount>
         new.bounce
         argo.type = t_i_phantom
     else
