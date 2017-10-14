@@ -153,14 +153,14 @@ tag0.snoop_time= <eval <serv.time>+30> //3 por seg
 if <belltest <stealing>,<SNOOP_CALC_DIF <argo.topobj>>>
     sysmessagegreen Voce furtou <argo.name>!
     
- serv.newdupe <argo> 
-  if <LOCAL.ia> >= <argo.amount> 
-   new.amount=<argo.amount>
-   argo.type = t_i_phantom
-  else 
-   new.amount=<LOCAL.ia> 
-   argo.decrement <LOCAL.ia>
-  endif
+ 	serv.newdupe <argo> 
+		if <LOCAL.ia> >= <argo.amount> 
+			new.amount=<argo.amount>
+			argo.type = t_i_phantom
+		else 
+			new.amount=<LOCAL.ia> 
+			argo.decrement <LOCAL.ia>
+		endif
 	new.bounce
  
 else
